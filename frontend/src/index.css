@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Unbounded:wght@300;400;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #06030f;
+  color: #f7f7fb;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #afa9ec 0%, #7f77dd 45%, #d4537e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  background: rgba(127, 119, 221, 0.06);
+  border: 1px solid rgba(127, 119, 221, 0.16);
+  border-radius: 18px;
+  backdrop-filter: blur(5px);
+}
+
+.ticker-track {
+  animation: ticker 32s linear infinite;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
